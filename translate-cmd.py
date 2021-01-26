@@ -81,7 +81,7 @@ def translateXML(path):
         content += 'int notes[' + str(len(notes)) + '] = {' + (', '.join(notes)) + '};\n\n'
         content += 'int durations[' + str(len(durations)) + '] = {' + (', '.join(list(map(str, durations)))) + '};'
 
-        headerContent += '#extern int notes[' + str(len(notes)) + '];\nextern int durations[' + str(len(durations)) + '];'
+        headerContent += 'extern int notes[' + str(len(notes)) + '];\nextern int durations[' + str(len(durations)) + '];\n\n'
 
     headerContent += '#endif'
 
